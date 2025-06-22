@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chu Demo 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<header>
+
+    <h1>  Chào mừng bạn đến với Công   </h1>
+
+    <div id="wrapper1">
+        <div id="header1">
+            <nav class="container">
+                <a  href="" id="logo">
+                    <img src="pic/logo.png" alt="toandienxaydung">
+                </a>
+                 <ul id="main-menu">
+                    <li><a href="">Trang Chủ</a></li>
+                    <li><a href="">Giới thiệu</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Về Chúng Tôi</a></li>
+                            <li><a href="">Công Trình Nổi Bật</a>
+                                <ul class="sub-menu">
+                            <li><a href="">Hồ Bơi</a></li>
+                            <li><a href="">Sân Banh</a></li>
+                            <li><a href="">Quán Billiards</a></li>
+                            <li><a href="">Khách Sạn</a></li>
+                            <li><a href="">Xây Dựng</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Sản Phẩm</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Vật Liệu Xây Dựng</a></li>
+                            <li><a href="">Nội Thất</a></li>
+                        </ul>
+                    </li>
+                    
+                 </ul>
+                            
+            </nav>
+
+        </div>    
+    </div>  
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+                // tim tat ca cac li co sub menu va them vao no class child
+                $('.sub-menu').parent('li').addClass('has-child');
+        });
+    </script>
+</header>
+
+<body>
+
+    
+
+</body>
+
+
+<br>
+<footer>
+    <br><br>
+    <a> © 2009 CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XÂY DỰNG TOÀN DIỆN </a><br>
+    <a>SĐT: </a><br>
+    <a>Email: xaydungtoandien123@gmail.com </a><br>
+    <a> Website: http://toandienthanhthanh.com</a>
+</footer>
+</html>

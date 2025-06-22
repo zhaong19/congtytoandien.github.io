@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Responsive</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .navbar a, .dropbtn {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 999;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        display: none;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+      }
+
+      .navbar.show {
+        display: flex;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="/Trang-chu/main.html" id="logo">
+      <img src="/pic/logo/logo.png" alt="Logo ToanDien">
+    </a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="navbar" id="navbar">
+    <a href="/Trang-chu/main.html" class="mainpage">TRANG CHỦ</a>
+    <a href="/Gioi-thieu/Gioi-thieu.html">GIỚI THIỆU</a>
+    <a href="/Gioi-thieu/cong-trinh-xay-dung.html">DỊCH VỤ</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">SẢN PHẨM</button>
+      <div class="dropdown-content">
+        <a href="/san-pham/noi-that.html">Nội thất</a>
+        <a href="/san-pham/vat-lieu-xay-dung.html">Vật liệu xây dựng</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>

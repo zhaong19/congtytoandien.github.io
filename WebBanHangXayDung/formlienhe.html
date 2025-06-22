@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formlienhe.css">
+    <title>Pop-Up Form</title>
+</head>
+<body>
+    <button class="openForm">Open Form 1</button>
+    <button class="openForm">Open Form 2</button>
+    <button class="openForm">Open Form 3</button>
+    <button class="openForm">Open Form 4</button>
+
+    <div id="popupForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Liên hệ</h2>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                 <input type="hidden" name="access_key" value="3011647f-65ca-4c0b-a11b-e409b441cf7b">
+                <label for="companyName">Tên công ty *</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="contactPerson">Người liên lạc *</label>
+                <input type="text" id="contactPerson" name="contactPerson" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Số điện thoại *</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="service">Dịch vụ *</label>
+                <select id="service" name="service" required>
+                    <option value="pool">Hồ bơi</option>
+                    <option value="hotel">Khách sạn</option>
+                    <option value="billiards">Biilliards</option>
+                    <option value="football">Sân bóng</option>
+                    <option value="showroom">Showroom (new)</option>
+                </select>
+
+                <label for="interior">Nội thất *</label>
+                <select id="interior" name="interior" required>
+                    <option value="furniture">Bàn ghế</option>
+                    <option value="bed">Giường</option>
+                    <option value="cabinet">Tủ kệ</option>
+                    <option value="decor">Trang trí</option>
+                    <option value="room">Phòng</option>
+                </select>
+
+                
+                <label for="note">Note</label>
+                <input type="note" id="note" name="note" required>
+
+
+                <button type="submit">Submit</button>
+                <!-- <button type="button" id="clearForm">Clear form</button> -->
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="formlienhe.js"></script> -->
+</body>
+</html>

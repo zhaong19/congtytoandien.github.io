@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sản phẩm - Pearl Plaza</title>
+  <style>
+    /* ===== Reset/remove các khu vực không cần ===== */
+    header, footer,
+    .breadcrumb, .breadcrumb-wrapper,
+    .related-products, .product-related,
+    .product-single__meta, .product-info,
+    .product-details, .product-form,
+    .product-description--full,
+    .product-tags, .tags {
+      display: none !important;
+    }
+
+    /* ===== Container chính ===== */
+    #product-view {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+    /* Hình ảnh sản phẩm */
+    .product-image {
+      flex: 1 1 40%;
+      max-width: 500px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+    /* Mô tả bên cạnh */
+    .product-description {
+      flex: 1 1 50%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .product-description h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+    .product-description p {
+      line-height: 1.6;
+    }
+    /* Button nhóm */
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-btn {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .call-btn {
+      background-color: #28a745;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="product-view">
+    <div class="product-image">
+      <!-- Thay src và alt phù hợp với sản phẩm -->
+      <img src="https://via.placeholder.com/600x600.png?text=Hình+ảnh+sản+phẩm" alt="Tên sản phẩm" />
+    </div>
+    <div class="product-description">
+      <h1>Tên sản phẩm</h1>
+      <p>Đây là phần mô tả ngắn gọn bên cạnh hình ảnh. Bạn có thể chèn HTML rich text, danh sách, hoặc bất cứ nội dung nào phù hợp với sản phẩm.</p>
+      <div class="button-group">
+        <a href="mailto:info@toandien.com" class="btn contact-btn">Liên hệ</a>
+        <a href="tel:0123456789" class="btn call-btn">Gọi ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Khi page load, xóa các vùng header/footer/breadcrumb/related/info nếu còn sót
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectorsToRemove = [
+        'header', 'footer',
+        '.breadcrumb', '.breadcrumb-wrapper',
+        '.related-products', '.product-related',
+        '.product-single__meta', '.product-info', '.product-details', '.product-form',
+        '.product-description--full',
+        '.product-tags', '.tags'
+      ];
+      selectorsToRemove.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.remove());
+      });
+    });
+  </script>
+</body>
+</html>
